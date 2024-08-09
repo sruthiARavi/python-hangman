@@ -1,16 +1,16 @@
-import hangman_logo
-import hangman_art
-import hangman_words
+from hangman_logo import logo
+from hangman_art import stages
+from hangman_words import word_list
 import random
 
 lives = 6
 end_of_game = False
 previous_guesses = []
-chosen_word = random.choice(hangman_words.word_list) 
+chosen_word = random.choice(word_list) 
 word_length = len(chosen_word)
 
 #print the logo first
-print(hangman_logo.logo)
+print(logo)
 
 #Testing code
 print(f'Pssst, the solution is {chosen_word}. Length is {word_length}\n')
@@ -62,7 +62,7 @@ while not end_of_game:
         print("********************* YOU WIN *********************")
 
     #Printing the ASCII art from 'stages' that corresponds to the current number of 'lives' the user has remaining.
-    print(hangman_art.stages[lives])
+    print(stages[lives])
   
     if lives == 0:
         print(f"\nThe word is {chosen_word}")
