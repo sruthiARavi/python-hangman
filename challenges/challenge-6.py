@@ -1,4 +1,5 @@
 #Not a challenge but embellishments based on the recommended solution 
+#from hangman_logo import logo
 from hangman_art import stages, logo
 import random
 
@@ -45,7 +46,7 @@ while not end_of_game:
         lives -= 1                        
         if lives == 0:
             end_of_game = True
-            print("\n********************* YOU LOSE *********************\n")
+            print(f"\n********************* IT WAS {chosen_word}! YOU LOSE *********************\n")
             
     else:
         previous_guesses.append(guess)
@@ -64,8 +65,5 @@ while not end_of_game:
         print("\n********************* YOU WIN *********************")
 
     #Print the ASCII art from 'stages' that corresponds to the current number of 'lives' the user has remaining.
-    print(stages[lives])
-    if lives == 0:
-        print(f"\nThe word is {chosen_word}")
-        
+    print(stages[lives])       
     print("\n")
