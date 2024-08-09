@@ -1,6 +1,5 @@
 #Not a challenge but embellishments based on the recommended solution 
-from hangman_logo import logo
-from hangman_art import stages
+from hangman_art import stages, logo
 import random
 
 lives = 6
